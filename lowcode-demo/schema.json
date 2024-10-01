@@ -1,0 +1,935 @@
+{
+    "version": "1.0.0",
+    "componentsMap": [
+      {
+        "package": "@alifd/fusion-ui",
+        "version": "2.0.2",
+        "exportName": "TabContainer",
+        "main": "lib/index.js",
+        "destructuring": true,
+        "subName": "Item",
+        "componentName": "Tab.Item"
+      },
+      {
+        "package": "@alifd/next",
+        "version": "1.25.23",
+        "exportName": "Tab",
+        "main": "",
+        "destructuring": true,
+        "subName": "",
+        "componentName": "Tab"
+      },
+      {
+        "devMode": "lowCode",
+        "componentName": "Page"
+      }
+    ],
+    "componentsTree": [
+      {
+        "componentName": "Page",
+        "id": "node_dockcviv8fo1",
+        "props": {
+          "ref": "outerView",
+          "style": {
+            "height": "100%"
+          }
+        },
+        "docId": "doclaqkk3b9",
+        "fileName": "/",
+        "dataSource": {
+          "list": [
+            {
+              "type": "fetch",
+              "isInit": true,
+              "options": {
+                "params": {},
+                "method": "GET",
+                "isCors": true,
+                "timeout": 5000,
+                "headers": {},
+                "uri": "mock/info.json"
+              },
+              "id": "info",
+              "shouldFetch": {
+                "type": "JSFunction",
+                "value": "function() { \n  console.log('should fetch.....');\n  return true; \n}"
+              }
+            }
+          ]
+        },
+        "state": {
+          "text": {
+            "type": "JSExpression",
+            "value": "\"outer\""
+          },
+          "isShowDialog": {
+            "type": "JSExpression",
+            "value": "false"
+          }
+        },
+        "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
+        "lifeCycles": {
+          "componentDidMount": {
+            "type": "JSFunction",
+            "value": "function componentDidMount() {\n  console.log('did mount');\n}",
+            "source": "function componentDidMount() {\n  console.log('did mount');\n}"
+          },
+          "componentWillUnmount": {
+            "type": "JSFunction",
+            "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}",
+            "source": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+          }
+        },
+        "methods": {
+          "testFunc": {
+            "type": "JSFunction",
+            "value": "function testFunc() {\n  console.log('test func');\n}",
+            "source": "function testFunc() {\n  console.log('test func');\n}"
+          },
+          "onClick": {
+            "type": "JSFunction",
+            "value": "function onClick() {\n  this.setState({\n    isShowDialog: true\n  });\n}",
+            "source": "function onClick() {\n  this.setState({\n    isShowDialog: true\n  });\n}"
+          },
+          "closeDialog": {
+            "type": "JSFunction",
+            "value": "function closeDialog() {\n  this.setState({\n    isShowDialog: false\n  });\n}",
+            "source": "function closeDialog() {\n  this.setState({\n    isShowDialog: false\n  });\n}"
+          },
+          "getHelloWorldText": {
+            "type": "JSFunction",
+            "value": "function getHelloWorldText() {\n  return this.i18n('i18n-jwg27yo4');\n}",
+            "source": "function getHelloWorldText() {\n  return this.i18n('i18n-jwg27yo4');\n}"
+          },
+          "getHelloWorldText2": {
+            "type": "JSFunction",
+            "value": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n    name: '絮黎'\n  });\n}",
+            "source": "function getHelloWorldText2() {\n  return this.i18n('i18n-jwg27yo3', {\n    name: '絮黎'\n  });\n}"
+          },
+          "onTestConstantsButtonClicked": {
+            "type": "JSFunction",
+            "value": "function onTestConstantsButtonClicked() {\n  console.log('constants.ConstantA:', this.constants.ConstantA);\n  console.log('constants.ConstantB:', this.constants.ConstantB);\n}",
+            "source": "function onTestConstantsButtonClicked() {\n  console.log('constants.ConstantA:', this.constants.ConstantA);\n  console.log('constants.ConstantB:', this.constants.ConstantB);\n}"
+          },
+          "onTestUtilsButtonClicked": {
+            "type": "JSFunction",
+            "value": "function onTestUtilsButtonClicked() {\n  this.utils.demoUtil('param1', 'param2');\n}",
+            "source": "function onTestUtilsButtonClicked() {\n  this.utils.demoUtil('param1', 'param2');\n}"
+          }
+        },
+        "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    });\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    });\n  }\n  getHelloWorldText() {\n    return this.i18n('i18n-jwg27yo4');\n  }\n  getHelloWorldText2() {\n    return this.i18n('i18n-jwg27yo3', {\n      name: '絮黎',\n    });\n  }\n  onTestConstantsButtonClicked() {\n    console.log('constants.ConstantA:', this.constants.ConstantA);\n    console.log('constants.ConstantB:', this.constants.ConstantB);\n\t}\n\tonTestUtilsButtonClicked(){\n    this.utils.demoUtil('param1', 'param2');\n\t}\n}",
+        "hidden": false,
+        "title": "",
+        "isLocked": false,
+        "condition": true,
+        "conditionGroup": "",
+        "children": [
+          {
+            "componentName": "Tab",
+            "id": "node_ocm0vy7sf24x",
+            "props": {
+              "shape": "pure",
+              "size": "medium",
+              "excessMode": "slide",
+              "items": [
+                {
+                  "primaryKey": "node_ocm0vy7sf24y",
+                  "title": "个人事务"
+                },
+                {
+                  "primaryKey": "node_ocm0vy7sf24z",
+                  "title": "计划管理"
+                },
+                {
+                  "primaryKey": "node_ocm0vy7sf250",
+                  "title": "现场管理"
+                },
+                {
+                  "primaryKey": "5597",
+                  "title": "周转缴库",
+                  "closeable": false,
+                  "disabled": false
+                },
+                {
+                  "primaryKey": "2364",
+                  "title": "异常处理",
+                  "closeable": false,
+                  "disabled": false
+                },
+                {
+                  "primaryKey": "7976",
+                  "title": "工艺基础数据",
+                  "closeable": false,
+                  "disabled": false
+                },
+                {
+                  "primaryKey": "3041",
+                  "title": "生产基础数据",
+                  "closeable": false,
+                  "disabled": false
+                },
+                {
+                  "primaryKey": "8498",
+                  "title": "看板管理",
+                  "closeable": false,
+                  "disabled": false
+                }
+              ],
+              "unmountInactiveTabs": false,
+              "needBadge": false,
+              "ref": "tab-8583e63e"
+            },
+            "hidden": false,
+            "title": "",
+            "isLocked": false,
+            "condition": true,
+            "conditionGroup": "",
+            "loopArgs": [
+              null,
+              null
+            ],
+            "children": [
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf251",
+                "props": {
+                  "primaryKey": "node_ocm0vy7sf24y",
+                  "title": "个人事务"
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": ""
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf252",
+                "props": {
+                  "primaryKey": "node_ocm0vy7sf24z",
+                  "title": "计划管理"
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "Tab",
+                    "id": "node_ocm0vy7sf2or",
+                    "props": {
+                      "shape": "pure",
+                      "size": "medium",
+                      "excessMode": "slide",
+                      "items": [
+                        {
+                          "primaryKey": "node_ocm0vy7sf2os",
+                          "title": "生产订单"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf2ot",
+                          "title": "粗能力平衡"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf2ou",
+                          "title": "计划下达"
+                        },
+                        {
+                          "primaryKey": "6272",
+                          "title": "流卡管理",
+                          "closeable": false,
+                          "disabled": false
+                        },
+                        {
+                          "primaryKey": "6724",
+                          "title": "调整订单",
+                          "closeable": false,
+                          "disabled": false
+                        }
+                      ],
+                      "unmountInactiveTabs": false,
+                      "needBadge": false
+                    },
+                    "hidden": false,
+                    "title": "",
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf2ov",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf2os",
+                          "title": "生产订单"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf2ow",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf2ot",
+                          "title": "粗能力平衡"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf2ox",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf2ou",
+                          "title": "计划下达"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf2oy",
+                        "props": {
+                          "primaryKey": "6272",
+                          "title": "流卡管理",
+                          "closeable": false,
+                          "disabled": false
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": "",
+                        "children": [
+                          {
+                            "componentName": "Tab",
+                            "id": "node_ocm0vy7sf212r",
+                            "props": {
+                              "shape": "pure",
+                              "size": "medium",
+                              "excessMode": "slide",
+                              "items": [
+                                {
+                                  "primaryKey": "node_ocm0vy7sf212s",
+                                  "title": "流卡打印"
+                                },
+                                {
+                                  "primaryKey": "node_ocm0vy7sf212t",
+                                  "title": "流卡查询"
+                                },
+                                {
+                                  "primaryKey": "node_ocm0vy7sf212u",
+                                  "title": "流卡调整"
+                                }
+                              ],
+                              "unmountInactiveTabs": false,
+                              "needBadge": false
+                            },
+                            "hidden": false,
+                            "title": "",
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf212v",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf212s",
+                                  "title": "流卡打印"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              },
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf212w",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf212t",
+                                  "title": "流卡查询"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              },
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf212x",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf212u",
+                                  "title": "流卡调整"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf2oz",
+                        "props": {
+                          "primaryKey": "6724",
+                          "title": "调整订单",
+                          "closeable": false,
+                          "disabled": false
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf253",
+                "props": {
+                  "primaryKey": "node_ocm0vy7sf250",
+                  "title": "现场管理"
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "Tab",
+                    "id": "node_ocm0vy7sf2xw",
+                    "props": {
+                      "shape": "pure",
+                      "size": "medium",
+                      "excessMode": "slide",
+                      "items": [
+                        {
+                          "primaryKey": "node_ocm0vy7sf2xx",
+                          "title": "工装配送管理"
+                        }
+                      ],
+                      "unmountInactiveTabs": false,
+                      "needBadge": false
+                    },
+                    "hidden": false,
+                    "title": "",
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf2y0",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf2xx",
+                          "title": "工装配送管理"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf2ge",
+                "props": {
+                  "primaryKey": "5597",
+                  "title": "周转缴库",
+                  "closeable": false,
+                  "disabled": false
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "Tab",
+                    "id": "node_ocm0vy7sf21aq",
+                    "props": {
+                      "shape": "pure",
+                      "size": "medium",
+                      "excessMode": "slide",
+                      "items": [
+                        {
+                          "primaryKey": "node_ocm0vy7sf21ar",
+                          "title": "工序周转"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf21as",
+                          "title": "零件缴库"
+                        }
+                      ],
+                      "unmountInactiveTabs": false,
+                      "needBadge": false
+                    },
+                    "hidden": false,
+                    "title": "",
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21au",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21ar",
+                          "title": "工序周转"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21av",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21as",
+                          "title": "零件缴库"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf2gf",
+                "props": {
+                  "primaryKey": "2364",
+                  "title": "异常处理",
+                  "closeable": false,
+                  "disabled": false
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "Tab",
+                    "id": "node_ocm0vy7sf21eh",
+                    "props": {
+                      "shape": "pure",
+                      "size": "medium",
+                      "excessMode": "slide",
+                      "items": [
+                        {
+                          "primaryKey": "node_ocm0vy7sf21ei",
+                          "title": "生产准备异常"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf21ej",
+                          "title": "生产过程异常"
+                        }
+                      ],
+                      "unmountInactiveTabs": false,
+                      "needBadge": false
+                    },
+                    "hidden": false,
+                    "title": "",
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21el",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21ei",
+                          "title": "生产准备异常"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": "",
+                        "children": [
+                          {
+                            "componentName": "Tab",
+                            "id": "node_ocm0vy7sf21m0",
+                            "props": {
+                              "shape": "pure",
+                              "size": "medium",
+                              "excessMode": "slide",
+                              "items": [
+                                {
+                                  "primaryKey": "node_ocm0vy7sf21m1",
+                                  "title": "组件生产准备检查"
+                                },
+                                {
+                                  "primaryKey": "node_ocm0vy7sf21m2",
+                                  "title": "零件生产准备检查"
+                                },
+                                {
+                                  "primaryKey": "node_ocm0vy7sf21m3",
+                                  "title": "生产准备检查"
+                                }
+                              ],
+                              "unmountInactiveTabs": false,
+                              "needBadge": false
+                            },
+                            "hidden": false,
+                            "title": "",
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf21m4",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf21m1",
+                                  "title": "组件生产准备检查"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              },
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf21m5",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf21m2",
+                                  "title": "零件生产准备检查"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              },
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf21m6",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf21m3",
+                                  "title": "生产准备检查"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21em",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21ej",
+                          "title": "生产过程异常"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf2gg",
+                "props": {
+                  "primaryKey": "7976",
+                  "title": "工艺基础数据",
+                  "closeable": false,
+                  "disabled": false
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "Tab",
+                    "id": "node_ocm0vy7sf21rb",
+                    "props": {
+                      "shape": "pure",
+                      "size": "medium",
+                      "excessMode": "slide",
+                      "items": [
+                        {
+                          "primaryKey": "node_ocm0vy7sf21rc",
+                          "title": "材料数据"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf21rd",
+                          "title": "工装数据"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf21re",
+                          "title": "配套数据"
+                        }
+                      ],
+                      "unmountInactiveTabs": false,
+                      "needBadge": false
+                    },
+                    "hidden": false,
+                    "title": "",
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21rf",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21rc",
+                          "title": "材料数据"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21rg",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21rd",
+                          "title": "工装数据"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21rh",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21re",
+                          "title": "配套数据"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf2gh",
+                "props": {
+                  "primaryKey": "3041",
+                  "title": "生产基础数据",
+                  "closeable": false,
+                  "disabled": false
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": "",
+                "children": [
+                  {
+                    "componentName": "Tab",
+                    "id": "node_ocm0vy7sf21xa",
+                    "props": {
+                      "shape": "pure",
+                      "size": "medium",
+                      "excessMode": "slide",
+                      "items": [
+                        {
+                          "primaryKey": "node_ocm0vy7sf21xb",
+                          "title": "合令参数配置"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf21xc",
+                          "title": "任务接口"
+                        },
+                        {
+                          "primaryKey": "node_ocm0vy7sf21xd",
+                          "title": "排产数据"
+                        }
+                      ],
+                      "unmountInactiveTabs": false,
+                      "needBadge": false
+                    },
+                    "hidden": false,
+                    "title": "",
+                    "isLocked": false,
+                    "condition": true,
+                    "conditionGroup": "",
+                    "children": [
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21xe",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21xb",
+                          "title": "合令参数配置"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21xf",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21xc",
+                          "title": "任务接口"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": ""
+                      },
+                      {
+                        "componentName": "Tab.Item",
+                        "id": "node_ocm0vy7sf21xg",
+                        "props": {
+                          "primaryKey": "node_ocm0vy7sf21xd",
+                          "title": "排产数据"
+                        },
+                        "hidden": false,
+                        "title": "",
+                        "isLocked": false,
+                        "condition": true,
+                        "conditionGroup": "",
+                        "children": [
+                          {
+                            "componentName": "Tab",
+                            "id": "node_ocm0vy7sf221p",
+                            "props": {
+                              "shape": "pure",
+                              "size": "medium",
+                              "excessMode": "slide",
+                              "items": [
+                                {
+                                  "primaryKey": "node_ocm0vy7sf221q",
+                                  "title": "粗能力平衡工具包"
+                                },
+                                {
+                                  "primaryKey": "node_ocm0vy7sf221r",
+                                  "title": "物料清单"
+                                }
+                              ],
+                              "unmountInactiveTabs": false,
+                              "needBadge": false
+                            },
+                            "hidden": false,
+                            "title": "",
+                            "isLocked": false,
+                            "condition": true,
+                            "conditionGroup": "",
+                            "children": [
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf221t",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf221q",
+                                  "title": "粗能力平衡工具包"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              },
+                              {
+                                "componentName": "Tab.Item",
+                                "id": "node_ocm0vy7sf221u",
+                                "props": {
+                                  "primaryKey": "node_ocm0vy7sf221r",
+                                  "title": "物料清单"
+                                },
+                                "hidden": false,
+                                "title": "",
+                                "isLocked": false,
+                                "condition": true,
+                                "conditionGroup": ""
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "componentName": "Tab.Item",
+                "id": "node_ocm0vy7sf2gi",
+                "props": {
+                  "primaryKey": "8498",
+                  "title": "看板管理",
+                  "closeable": false,
+                  "disabled": false
+                },
+                "hidden": false,
+                "title": "",
+                "isLocked": false,
+                "condition": true,
+                "conditionGroup": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "i18n": {
+      "zh-CN": {
+        "i18n-jwg27yo4": "你好 ",
+        "i18n-jwg27yo3": "{name} 博士"
+      },
+      "en-US": {
+        "i18n-jwg27yo4": "Hello ",
+        "i18n-jwg27yo3": "Doctor {name}"
+      }
+    }
+  }
