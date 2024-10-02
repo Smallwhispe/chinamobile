@@ -1,0 +1,2 @@
+#,id,scenario_name,list_json,created_at,updated_at
+1,13,general,"[{""id"": ""process"", ""slug"": ""process"", ""title"": ""工序表""}, {""id"": ""machine"", ""slug"": ""machine"", ""title"": ""机器表""}, {""id"": ""workpiece"", ""slug"": ""workpiece"", ""title"": ""工件表""}, {""id"": ""gantt"", ""slug"": ""gantt"", ""title"": ""甘特图及算法选择""}]",2024/9/30 17:07,2024/10/2 12:32
