@@ -1,3 +1,8 @@
 {
-  "info": "Hello AliLowCode!!"
+  "jobs": [1,2,3,4,5,6,7,8],
+  "startTimes": [0,1,3,4,5,6,7,8],
+  "durations": [2,2,1,2,1,1,2,1],
+  "equipmentIds": [1,2,1,3,2,1,3,2],
+  "rowHeight":40,
+  "columnWidt":60
 }

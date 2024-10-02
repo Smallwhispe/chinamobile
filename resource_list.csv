@@ -1,2 +1,2 @@
 #,id,scenario_name,list_json,created_at,updated_at
-1,13,general,"[{""id"": ""process"", ""slug"": ""process"", ""title"": ""¹¤Ğò±í""}, {""id"": ""machine"", ""slug"": ""machine"", ""title"": ""»úÆ÷±í""}, {""id"": ""workpiece"", ""slug"": ""workpiece"", ""title"": ""¹¤¼ş±í""}, {""id"": ""gantt"", ""slug"": ""gantt"", ""title"": ""¸ÊÌØÍ¼¼°Ëã·¨Ñ¡Ôñ""}]",2024/9/30 17:07,2024/10/2 12:32
+1,13,general,"[{""id"": ""process"", ""slug"": ""process"", ""title"": ""å·¥åºè¡¨""}, {""id"": ""machine"", ""slug"": ""machine"", ""title"": ""æœºå™¨è¡¨""}, {""id"": ""workpiece"", ""slug"": ""workpiece"", ""title"": ""å·¥ä»¶è¡¨""}, {""id"": ""gantt"", ""slug"": ""gantt"", ""title"": ""ç”˜ç‰¹å›¾åŠç®—æ³•é€‰æ‹©""}]",2024-09-30 17:07:53,2024-10-02 11:48:14

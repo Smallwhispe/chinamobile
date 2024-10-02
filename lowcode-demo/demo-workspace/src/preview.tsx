@@ -18,31 +18,32 @@ const getScenarioName = function () {
 
 const SamplePreview = () => {
   const [data, setData] = useState({});
-
-  const [schema, setSchema] = useState()
-
-  const [activeNav, setActiveNav] = useState()
-
+  const [schema, setSchema] = useState();
+  const [activeNav, setActiveNav] = useState();
   const scenarioName = getScenarioName();
 
   async function init() {
+    console.log('初始化数据...');
     const resourceList = await getResourceListFromLocalStorage(scenarioName);
     const allComponents = {};
     const allPackages = [];
     const libraryMap = {};
+    let combinedDataSource = {}; // 初始化合并的 dataSource
+
     for (const resource of resourceList) {
       const id = resource.id;
-      const packages =await  getPackagesFromLocalStorage(scenarioName, id);
-      const projectSchema = await  getProjectSchemaFromLocalStorage(scenarioName, id);
+      console.log(`加载资源 ID: ${id}`);
+      const packages = await getPackagesFromLocalStorage(scenarioName, id);
+      const projectSchema = await getProjectSchemaFromLocalStorage(scenarioName, id);
 
-      // 处理 componentsMap 和其他数据
       const { componentsMap: componentsMapArray, componentsTree } = projectSchema;
 
-      console.log('项目架构:', projectSchema);
-      console.log('组件映射:', componentsMapArray);
-      console.log('组件树:', componentsTree);
       componentsMapArray.forEach((component) => {
         allComponents[component.componentName] = component;
+      });
+
+      componentsTree.forEach((schema) => {
+        combinedDataSource = mergeWith(combinedDataSource, schema.dataSource || {}, customizer);
       });
 
       packages.forEach(({ package: _package, library, urls, renderUrls }) => {
@@ -55,43 +56,29 @@ const SamplePreview = () => {
       });
     }
 
-  // 加载所有资源
-  const assetLoader = new AssetLoader();
-  await assetLoader.load(allPackages);
-  const components = await injectComponents(buildComponents(libraryMap, allComponents));
+    // 加载所有资源
+    const assetLoader = new AssetLoader();
+    await assetLoader.load(allPackages);
+    const components = await injectComponents(buildComponents(libraryMap, allComponents));
 
-  const id = resourceList?.[0].id;
-  const packages =await getPackagesFromLocalStorage(scenarioName, id);
-  const projectSchema =await getProjectSchemaFromLocalStorage(scenarioName, id);
-  const {
-    componentsMap: componentsMapArray,
-    componentsTree,
-    i18n,
-    dataSource: projectDataSource,
-  } = projectSchema;
+    const id = resourceList?.[0].id;
+    const projectSchema = await getProjectSchemaFromLocalStorage(scenarioName, id);
+    const { componentsTree } = projectSchema;
 
-    console.log('componentsTree[0]:', JSON.stringify(componentsTree[0], null, 2));
-    console.log('componentsTree:', JSON.stringify(componentsTree, null, 2));
     const pageSchema = componentsTree[0];
-    
     setSchema(pageSchema);
-
-    console.log('id', id, resourceList);
     setActiveNav(id);
-    console.log('资源列表:', resourceList);
-    console.log('组件:', components);
 
-
+    console.log('合并后的数据源:', combinedDataSource);
     setData({
-      // schema: pageSchema,
       components,
-      i18n,
-      projectDataSource,
+      i18n: projectSchema.i18n || {},
+      projectDataSource: combinedDataSource,
       resourceList,
     });
   }
 
-  const { components, i18n = {}, projectDataSource = {} } = data as any;
+  const { components, i18n = {}, projectDataSource = {} } = data;
 
   if (!schema || !components) {
     init();
@@ -100,9 +87,7 @@ const SamplePreview = () => {
   const currentLocale = getPreviewLocale(getScenarioName());
 
   if (!(window as any).setPreviewLocale) {
-    // for demo use only, can use this in console to switch language for i18n test
-    // 在控制台 window.setPreviewLocale('en-US') 或 window.setPreviewLocale('zh-CN') 查看切换效果
-    (window as any).setPreviewLocale = (locale:string) => setPreviewLocale(getScenarioName(), locale);
+    (window as any).setPreviewLocale = (locale: string) => setPreviewLocale(getScenarioName(), locale);
   }
 
   function customizer(objValue: [], srcValue: []) {
@@ -111,7 +96,7 @@ const SamplePreview = () => {
     }
   }
 
-  console.log('activeNav', activeNav);
+  console.log('当前激活的导航:', activeNav);
 
   return (
     <div className="lowcode-plugin-sample-preview">         
@@ -122,7 +107,7 @@ const SamplePreview = () => {
       >
         <Shell.Branding>
           <div className="rectangular"></div>
-          <span style={{ marginLeft: 10 }}>App Name</span>
+          <span style={{ marginLeft: 10 }}></span>
         </Shell.Branding>
         <Shell.Navigation direction="hoz">
           <Search
@@ -145,9 +130,9 @@ const SamplePreview = () => {
                 <Nav.Item
                   key={d.id}
                   onClick={async () => {
-                    const projectSchema =await getProjectSchemaFromLocalStorage(scenarioName, d.id);
-                    console.log('setSchema', d.id, projectSchema?.componentsTree[0]);
-                    setSchema(projectSchema?.componentsTree[0])
+                    const projectSchema = await getProjectSchemaFromLocalStorage(scenarioName, d.id);
+                    console.log('设置当前 schema:', d.id, projectSchema?.componentsTree[0]);
+                    setSchema(projectSchema?.componentsTree[0]);
                   }}
                   icon="account"
                 >{d.title}</Nav.Item>
