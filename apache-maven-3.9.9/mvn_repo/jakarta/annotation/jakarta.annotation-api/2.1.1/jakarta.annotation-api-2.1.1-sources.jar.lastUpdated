@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Sep 01 16:23:33 CST 2024
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1725179013402
+http\://0.0.0.0/.error=Could not transfer artifact jakarta.annotation\:jakarta.annotation-api\:jar\:sources\:2.1.1 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [alimaven (http\://maven.aliyun.com/nexus/content/groups/public/, default, releases)]
