@@ -1,4 +1,0 @@
-#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Sun Sep 01 16:58:24 CST 2024
-@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1725181104234
-http\://0.0.0.0/.error=Could not transfer artifact jakarta.activation\:jakarta.activation-api\:jar\:sources\:1.2.2 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [alimaven (http\://maven.aliyun.com/nexus/content/groups/public/, default, releases)]

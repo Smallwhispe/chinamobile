@@ -1,4 +1,0 @@
-#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Sun Sep 01 16:23:33 CST 2024
-@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1725179013458
-http\://0.0.0.0/.error=Could not transfer artifact net.bytebuddy\:byte-buddy-agent\:jar\:sources\:1.14.19 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [alimaven (http\://maven.aliyun.com/nexus/content/groups/public/, default, releases)]
